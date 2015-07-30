@@ -13,7 +13,7 @@ export default function() {
   this.post('/api/v1/casts', function(db, request) {
     return authorize(request, db, (user) => {
       const cast = JSON.parse(request.requestBody);
-      return { cast: db.casts.insert({ content: cast.content, user: user.id }) };
+      return { cast: db.casts.insert({ content: cast.content, user: user.id, createdAt: Date.now() }) };
     });
   });
 
