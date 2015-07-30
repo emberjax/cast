@@ -1,20 +1,9 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from 'cast/tests/helpers/start-app';
-import PO from '../page-object';
+import page from '../pages/casts';
 
 let application;
-
-var page = PO.build({
-  visit: PO.visitable('/casts'),
-
-  casts: PO.collection({
-    itemScope: 'main .cast-card',
-    item: {
-      content: PO.text('.content')
-    }
-  })
-});
 
 module('Acceptance | user views casts', {
   beforeEach: function() {
