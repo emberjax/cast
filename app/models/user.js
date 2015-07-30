@@ -1,6 +1,5 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  content: DS.attr(),
-  user: DS.belongsTo('user')
+  token: DS.attr()
 });

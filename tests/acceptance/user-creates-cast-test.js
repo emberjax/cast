@@ -1,13 +1,13 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import startApp from 'cast/tests/helpers/start-app';
+import startAppAuthorized from 'cast/tests/helpers/start-app-authorized';
 import page from '../pages/casts';
 
 let application;
 
 module('Acceptance | user creates cast', {
   beforeEach: function() {
-    application = startApp();
+    application = startAppAuthorized();
   },
 
   afterEach: function() {
