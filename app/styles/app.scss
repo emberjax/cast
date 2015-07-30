@@ -53,6 +53,13 @@ $nav-height: 35px;
     }
     .casts-list {
       width: 100%;
+      .cast-card {
+        .handle {
+          font-weight: bold;
+          font-size: 14px;
+          color: #292f33;
+        }
+      }
     }
     .new-cast {
       width: 100%;

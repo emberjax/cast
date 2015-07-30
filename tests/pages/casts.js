@@ -6,6 +6,7 @@ export default PO.build({
   casts: PO.collection({
     itemScope: 'main .cast-card',
     item: {
+      handle: PO.text('.handle'),
       content: PO.text('.content')
     }
   }),
