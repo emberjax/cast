@@ -6,8 +6,10 @@ moduleForComponent('casts-list', 'Integration | Component | casts list', {
 });
 
 test('it renders cast cards', function(assert) {
-  assert.expect(1);
-  this.set('model', [{}]);
+  assert.expect(2);
+  const cast = { content: 'test' };
+  this.set('model', [cast]);
   this.render(hbs`{{casts-list casts=model}}`);
   assert.equal(this.$('.cast-card').length, 1);
+  assert.trimEq(this.$('.cast-card .content').text(), cast.content);
 });

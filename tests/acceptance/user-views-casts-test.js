@@ -9,7 +9,10 @@ var page = PO.build({
   visit: PO.visitable('/casts'),
 
   casts: PO.collection({
-    itemScope: '.cast-card',
+    itemScope: 'main .cast-card',
+    item: {
+      content: PO.text('.content')
+    }
   })
 });
 
@@ -30,5 +33,15 @@ test('lists casts', function(assert) {
 
   andThen(function() {
     assert.equal(page.casts().count(), 3);
+  });
+});
+
+test('lists casts', function(assert) {
+  server.create('cast', { content: 'foo' });
+
+  page.visit();
+
+  andThen(function() {
+    assert.equal(page.casts(1).content(), 'foo');
   });
 });

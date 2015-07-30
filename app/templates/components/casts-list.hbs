@@ -1,5 +1,7 @@
 {{#each casts as |cast|}}
   {{#mdl-card class='cast-card mdl-cell mdl-cell--12-col'}}
-
+    <div class="content mdl-card__supporting-text">
+      {{cast.content}}
+    </div>
   {{/mdl-card}}
 {{/each}}
