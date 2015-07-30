@@ -1,0 +1,11 @@
+<div class="new-cast-card mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+  <div class="content mdl-card__supporting-text">
+    {{mdl-textarea label="What's happening?" value=content}}
+    <div class="actions mdl-card__actions">
+      <div class="mdl-layout-spacer"></div>
+      {{#mdl-button class="create-cast" disabled=empty isColored=false hasRipples=true action="createCast"}}
+        Cast
+      {{/mdl-button}}
+    </div>
+  </div>
+</div>

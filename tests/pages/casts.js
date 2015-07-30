@@ -8,5 +8,10 @@ export default PO.build({
     item: {
       content: PO.text('.content')
     }
-  })
+  }),
+
+  newCast: {
+    content: PO.fillable('.content textarea'),
+    submit: PO.clickable('.new-cast .create-cast')
+  }
 });
