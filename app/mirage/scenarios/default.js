@@ -1,2 +1,3 @@
-export default function() {
+export default function(server) {
+  server.createList('cast', 3);
 }
