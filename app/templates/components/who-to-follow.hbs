@@ -1,4 +1,5 @@
 <h2>Who to follow</h2>
+<button {{ action "skipAll" }}>Refresh list</button>
 <ul>
   {{# each users as |followee| }}
     <li>{{ followee.handle }}</li>
