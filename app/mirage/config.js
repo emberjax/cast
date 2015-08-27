@@ -4,6 +4,10 @@ export default function() {
 
   this.get('/api/v1/users/:id');
 
+  this.get('api/v1/users', function(db) {
+    return { users: db.users.where({token: 'secret' }) };
+  });
+
   this.get('/api/v1/users/me', function(db, request) {
     return authorize(request, db, (user) => {
       return { user };
