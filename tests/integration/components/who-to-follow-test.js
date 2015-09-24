@@ -11,7 +11,6 @@ moduleForComponent('who-to-follow', 'Integration | Component | who to follow', {
 });
 
 test('it renders', function(assert) {
-
   server.create('user', {handle: 'foo'});
   server.create('user', {handle: 'bar'});
   server.create('user', {handle: 'baz'});

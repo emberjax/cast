@@ -2,6 +2,6 @@
 <button {{ action "skipAll" }}>Refresh list</button>
 <ul>
   {{# each users as |followee| }}
-    <li>{{ followee.handle }}</li>
+  <li>{{ followee.handle }} <a href="#" {{ action "skip" followee }} class="ihateu">X</a></li> 
   {{/ each }}
 </ul>

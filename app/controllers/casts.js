@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
   createdAtDesc: ['createdAt:desc'],
   casts: Ember.computed.sort('model', 'createdAtDesc'),
   actions: {
