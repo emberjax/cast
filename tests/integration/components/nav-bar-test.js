@@ -1,12 +1,11 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import AppRouter from 'cast/router';
 import setupRouter from '../../helpers/setup-router';
 
 moduleForComponent('nav-bar', 'Integration | Component | nav bar', {
   integration: true,
   setup() {
-    setupRouter(AppRouter, this);
+    setupRouter(this);
   }
 });
 
